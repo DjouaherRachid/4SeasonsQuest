@@ -12,7 +12,7 @@ public class PickUpController : MonoBehaviour
 
     [Header("Physics Parameters")] 
     [SerializeField] private float pickupRange = 5.0f;
-    [SerializeField] private float pickupForce = 5.0f;
+    [SerializeField] private float pickupForce = 150.0f;
 
     private void Update()
     {
