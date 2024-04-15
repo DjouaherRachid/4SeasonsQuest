@@ -49,9 +49,9 @@ public class TreeZoneScript : MonoBehaviour
     {
         if (isSeedInside && isBucketInside)
         {
-                animator.SetTrigger(GrowTree);
-                seed.SetActive(false);
-                bucket.SetActive(false);
+            animator.SetTrigger(GrowTree);
+            seed.SetActive(false);
+            bucket.SetActive(false);
         }
     }
 }
