@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,11 +41,7 @@ public class PickUpController : MonoBehaviour
 
     void MoveObject()
     {
-        if (Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
-        {
-            Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
-            heldObjRB.AddForce(moveDirection * pickupForce);
-        }
+        heldObj.transform.position = holdArea.position; // Positionner l'objet à la position de la holdArea
     }
     
     void PickupObject(GameObject pickObj)
@@ -58,7 +53,6 @@ public class PickUpController : MonoBehaviour
             heldObjRB.drag = 10;
             heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
 
-            heldObjRB.transform.parent = holdArea;
             heldObj = pickObj;
         }
     }
@@ -69,7 +63,6 @@ public class PickUpController : MonoBehaviour
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
         
-        heldObjRB.transform.parent = null;
         heldObj = null;
     }
     
