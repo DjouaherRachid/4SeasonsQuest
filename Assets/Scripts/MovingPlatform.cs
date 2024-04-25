@@ -1,18 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter(Collision other)
     {
-        collider.transform.SetParent(transform);
+        if (other.rigidbody.gameObject.layer != LayerMask.NameToLayer("Player"))
+        {
+            return;
+        }
+
+        other.rigidbody.gameObject.transform.parent = gameObject.transform;
     }
 
-    private void OnTriggerExit(Collider collider)
+    private void OnCollisionExit(Collision other)
     {
-        collider.transform.SetParent(null);
+        if (other.rigidbody.gameObject.layer != LayerMask.NameToLayer("Player"))
+        {
+            return;
+        }
+
+        other.rigidbody.gameObject.transform.parent = null;
     }
-    
 }
