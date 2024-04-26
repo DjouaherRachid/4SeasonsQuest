@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadLevel1 : MonoBehaviour
+public class ChangeSceneScript : MonoBehaviour
 {
     public void ChangeSceneNow(string sceneName)
     {

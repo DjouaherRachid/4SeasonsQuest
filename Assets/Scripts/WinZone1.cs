@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class WinZone : MonoBehaviour
+public class WinZone1 : MonoBehaviour
 {    public TextMeshProUGUI  winText;
     public Button winButton;
 
@@ -16,7 +16,7 @@ public class WinZone : MonoBehaviour
             winText.gameObject.SetActive(true);
             winButton.gameObject.SetActive(true);
             */
-            SceneManager.LoadScene("Level2Scene");
+            SceneManager.LoadScene("Level3Automn");
         }
     }
 }

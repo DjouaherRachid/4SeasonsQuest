@@ -22,7 +22,7 @@ public class TreeZoneScript : MonoBehaviour
         }
         else if (collision.gameObject == bucket)
         {   
-            // Vérifier si le seau est rempli d'eau
+            // Check if bucket is filled
             if(bucket.GetComponent<BucketBehaviour>().isFull == true)
             {
                 isBucketInside = true;
