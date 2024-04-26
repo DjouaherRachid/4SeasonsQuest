@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public CharacterController characterController;
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;
@@ -13,8 +14,6 @@ public class CameraMovement : MonoBehaviour
     public Camera playerCamera;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
-    
-    CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
